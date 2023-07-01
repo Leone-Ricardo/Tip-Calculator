@@ -1,0 +1,231 @@
+@import url("https://fonts.google.com/specimen/Space+Mono");
+
+:root {
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--Light-grayish-cyan);
+  font-family: "Mono Space";
+  height: 100vh;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 1.7rem;
+  margin-bottom: 1.3rem;
+}
+
+.tip-calculator {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1.4rem 1.4rem 0 0;
+}
+
+label {
+  background-color: var(--White);
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: var(--Very-light-grayish-cyan);
+  padding: 5px;
+  padding-right: 18px;
+  text-align: right;
+  background-position: 17px 15px;
+  background-repeat: no-repeat;
+  color: var(--Very-dark-cyan);
+  font-family: "Mono Space", monospace;
+}
+
+.bill-input {
+  background-image: url(./images/icon-dollar.svg);
+  margin-bottom: 36px;
+  font-size: 27px;
+  color: var(--Very-dark-cyan);
+}
+
+.tip {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: 144px 144px;
+  row-gap: 2em;
+  column-gap: 18px;
+  margin-bottom: 2rem;
+}
+
+.tips {
+  cursor: pointer;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 4px;
+}
+
+.active-tip {
+  color: var(--Very-dark-cyan);
+  background-color: hsl(172, 67%, 48%);
+  font-weight: bolder;
+}
+
+.people-input {
+  background-image: url(./images/icon-person.svg);
+  margin-bottom: 2.7rem;
+  color: var(--Very-dark-cyan);
+  font-size: 27px;
+}
+
+.result {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  padding: 39px 21px;
+  border-radius: 12px;
+}
+
+.tip-amount,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+  font-size: 27px;
+}
+
+.person {
+  font-size: 12px;
+  color: var(--Grayish-cyan);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.amount {
+  font-size: 28px;
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+}
+
+.reset {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+  background-color: hsl(172, 67%, 48%);
+  padding: 9px 0 9px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: aqua;
+}
+
+#tip-custom input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 55px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+}
+
+.peopleLabel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: tomato;
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  input {
+    width: 455px;
+    padding: 9px;
+    background-position: 17px 18px;
+  }
+  .tip-calculator {
+    width: 990px;
+    flex-direction: row;
+    border-radius: 1.4rem;
+    padding: 2.3rem;
+    height: 479px;
+  }
+
+  .part-one {
+    margin-top: 1rem;
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bill-input {
+    margin-bottom: 3.4rem;
+  }
+
+  .tip {
+    grid-template-columns: 135px 135px 135px;
+    row-gap: 1.2rem;
+    column-gap: 17px;
+    margin-bottom: 3.2rem;
+  }
+
+  .tips {
+    height: 55px;
+  }
+
+  .result {
+    margin-left: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 48px 38px;
+  }
+
+  .amount {
+    font-size: 55px;
+  }
+
+  .reset {
+    padding: 13px 0 13px 0;
+    margin-top: auto;
+  }
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 50px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
